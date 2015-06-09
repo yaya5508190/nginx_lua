@@ -1,6 +1,7 @@
 --初始化耗时的模块
 local redis = require 'resty.redis'
 local cjson = require 'cjson'
+local mylib = require 'mylib'
 
 --全局变量，不推荐
 count = 1
