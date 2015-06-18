@@ -2,6 +2,7 @@
 local redis = require 'resty.redis'
 local cjson = require 'cjson'
 local mylib = require 'mylib'
+local hexutils = require 'hexutils'
 
 --全局变量，不推荐
 count = 1
