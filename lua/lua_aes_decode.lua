@@ -3,7 +3,7 @@ local aes = require "resty.aes"
 local str = require "resty.string"
 
 local uri_args = ngx.req.get_uri_args()  
-local key = "qazxswa"
+local key = "shQT4Id"
 local uri = ngx.var.uri
 ngx.log(ngx.ERR, uri)
 
