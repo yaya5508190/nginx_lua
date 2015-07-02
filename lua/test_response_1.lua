@@ -3,7 +3,7 @@ ngx.header.a = "1"
 --多个响应头可以使用table  
 ngx.header.b = {"2", "3"}  
 --输出响应  
-ngx.status = 403
+--ngx.status = 403
 ngx.say("a", "b", "<br/>")  
 ngx.print("c", "d", "<br/>")  
 --200状态码退出  
