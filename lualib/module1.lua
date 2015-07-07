@@ -1,6 +1,6 @@
-local function hello(count)  
+local hello =  function(count)  
    count = count + 1
-   ngx.say(count) 
+   return count
 end  
   
 local _M = {  
