@@ -67,13 +67,14 @@ for i, v in ipairs(respTable) do
    ngx.say("msg : ", v, "<br/>")  
 end
 
-local sha1, err = red:script("load",  "return redis.call('get', ARGV[1])");  
+--local sha1, err = red:script("load",  "return redis.call('get', ARGV[1])");  
+local sha1, err = red:script("load",  "return redis.call('get', KEYS[1])");  
 if not sha1 then  
    ngx.say("load script error : ", err)  
    return close_redis(red)  
 end  
 ngx.say("sha1 : ", sha1, "<br/>")  
-local resp, err = red:evalsha(sha1, 0, "msg");
+local resp, err = red:evalsha(sha1, 1, "msg");
 
 ngx.say("msg :",resp)  
 close_redis(red)  
